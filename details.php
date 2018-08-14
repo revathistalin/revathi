@@ -31,7 +31,7 @@
  <tr><td>Address:</td><td><textarea name="address" row="6" column="40"></textarea></td></tr>                     
 
 
-<tr><td><input type="submit" value="submit"></td></tr>
+<tr><td><input type="submit" value="submit"></td></tr>s
 </form>
 </table>
 
