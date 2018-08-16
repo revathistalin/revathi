@@ -1,4 +1,5 @@
 <?php
+$id= $_GET['id'];
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -11,18 +12,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if (isset($_GET['firstname']) && is_numeric($_GET['firstname']))
-{
-$firstname= $_GET['firstname'];
+$deletedata = "DELETE FROM studentdetails WHERE studentdetails.id=$id";
 
-$result = mysql_query("DELETE FROM studentdetails WHERE firstname=$firstname")
-or die(mysql_error());
-
-header("Location: view.php");
+if ($conn->query($deletedata) === TRUE) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . $conn->error;
 }
-else
 
-{
-header("Location: view.php");
-}
+
 ?>
