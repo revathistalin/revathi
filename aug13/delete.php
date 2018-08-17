@@ -20,5 +20,6 @@ if ($conn->query($deletedata) === TRUE) {
     echo "Error deleting record: " . $conn->error;
 }
 
+echo '<td><b><font color="#663300"><a href="view.php?">view</a></font></b></td>';
 
 ?>

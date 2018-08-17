@@ -66,7 +66,7 @@ while($result=mysqli_fetch_assoc($getdata))
                       <input type="checkbox" name="city" <?php if($City=="madurai") echo "checked";?> value="madurai">Madurai</td></tr><br>
 
  <tr><td>Address:</td><td><textarea name="address" row="6" column="40" ><?php echo $Address?></textarea></td></tr>                     
- <tr><td>image:</td><td><input type="file"  name="image" value="<?php echo $image ?>" accept="image/*"></td><td><img src='<?php echo $image; ?>'width="100" height="100" alt='nature'/></td></tr>           
+ <tr><td>image:</td><td><input type="file"  name="upload" value="<?php echo $image ?>" accept="image/*"></td><td><img src='<?php echo $image; ?>'width="100" height="100" alt='nature'/></td></tr>           
 
 
 <tr><td><input type="submit" name="update" value="update"></td></tr>
@@ -75,5 +75,7 @@ while($result=mysqli_fetch_assoc($getdata))
 
 </body>
 </html>
-
+<?php
+echo '<td><b><font color="#663300"><a href="view.php?">view</a></font></b></td>';
+?>
 

@@ -1,6 +1,4 @@
 <?php
-
-
 echo "FirstName :"." ".$_POST["firstname"]."<br>";
 echo "LastLame :"." ".$_POST["lastname"]."<br>";
 echo "Dateofbirth :"." ".$_POST["dateofbirth"]."<br>";
@@ -29,7 +27,7 @@ if ($conn->connect_error) {
 } 
 
 $targetDir = "uploads/";
-$fileName = basename($_FILES["image"]["name"]);
+$fileName = basename($_FILES["upload"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 echo $fileType;
@@ -53,8 +51,7 @@ $Address=$_POST['address'];
 if($_POST['submit'])
 {
 $insertquery="INSERT INTO studentdetails(image,firstname,lastname,dateofbirth,email,password,phoneno,country,state,gender,city,address)VALUES('$fileName','$Firstname','$Lastname','$Dateofbirth','$Email','$Password','$Phoneno','$Country','$State','$Gender','$City','$Address')";
-$insertquery;
-die();
+echo $insertquery;
 $data=mysqli_query($conn,$insertquery);
 if (!$data) {
     echo "Error: " . $insertquery. "<br>" . $conn->error;
@@ -63,6 +60,8 @@ if (!$data) {
     echo "created successfully";
 }
 }
+echo "<br>";
+echo '<td><b><font color="#663300"><a href="view.php?">view</a></font></b></td>';
 
 ?>
 

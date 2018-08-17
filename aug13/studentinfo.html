@@ -2,8 +2,8 @@
 <head>
 	<h1>ENTER YOUR DETAILS</h1>
 </head>
-<body style="background-color:powderblue">
-<form action="welcome.php" method="post" >
+<body style="background-color:powderblue" >
+<form action="welcome.php" method="post" enctype="multipart/form-data" >
 <table>
 <tr><td>FirstName:</td><td><input type="text" name="firstname" placeholder="Enter your FirstName"></td></tr>
 <tr><td>LastName:</td><td><input type="text" name="lastname" placeholder="Enter Your LastName"></td></tr>
@@ -29,7 +29,7 @@
                       <td><input type="checkbox" name="city" value="madurai">Madurai</td></tr>
 
  <tr><td>Address:</td><td><textarea name="address" row="6" column="40" ></textarea></td></tr> 
- <tr><td>image:</td><td><textarea name="image"></td></tr>          
+ <tr><td>image:</td><td><input type="file" name="upload" ></td></tr>          
 
 
 

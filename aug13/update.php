@@ -33,4 +33,7 @@ if ($conn->query($updatedata) === TRUE) {
 } else {
     echo "Error updating record: " . $conn->error;
 }
+
+echo '<td><b><font color="#663300"><a href="view.php?">view</a></font></b></td>';
+
 ?>
